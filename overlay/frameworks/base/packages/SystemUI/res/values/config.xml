@@ -42,6 +42,10 @@
         <item>4</item>     <!-- 5.0: Dark environment -->
     </integer-array>
 
+    <!-- Comma-separated list of packages to exclude from camera protection. In our case,
+    ignore the gaze detection package -->
+    <string translatable="false" name="config_cameraProtectionExcludedPackages">com.google.android.as</string>
+
     <!-- Doze: Table that translates sensor values from the doze_brightness_sensor_type sensor
                to an opacity value for a black scrim that is overlayed in AOD1.
                Valid range is from 0 (transparent) to 255 (opaque).
