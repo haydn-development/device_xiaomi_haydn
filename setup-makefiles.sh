@@ -1,18 +1,16 @@
 #!/bin/bash
 #
-<<<<<<< HEAD
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2022 The LineageOS Project
-=======
-# Copyright (C) 2020 The LineageOS Project
->>>>>>> lineage-20
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-<<<<<<< HEAD
+DEVICE=haydn
+VENDOR=xiaomi
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
@@ -26,36 +24,13 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
-write_headers "haydn lisa odin renoir venus"
+write_headers
 
-# The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish
 write_footers
-
-if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
-
-    # Warning headers and guards
-    write_headers
-
-    # The standard device blobs
-    write_makefiles "${MY_DIR}/../${DEVICE}/proprietary-files.txt" true
-
-    # Finish
-    write_footers
-fi
-=======
-# Required!
-export DEVICE=haydn
-export DEVICE_COMMON=sm8350-common
-export VENDOR=xiaomi
-
-"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
->>>>>>> lineage-20
