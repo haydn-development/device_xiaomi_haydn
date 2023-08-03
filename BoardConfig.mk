@@ -94,7 +94,7 @@ BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=$(PRODUCT_DEVICE)
-TARGET_KERNEL_NO_GCC := true
+TARGET_KERNEL_NO_GCC := false
 TARGET_KERNEL_SOURCE := kernel/xiaomi/haydn
 TARGET_KERNEL_CONFIG := vendor/lahaina-qgki_defconfig vendor/xiaomi_QGKI.config vendor/haydn_QGKI.config
 
