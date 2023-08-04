@@ -1391,7 +1391,7 @@ vendor/etc/mdss_dsi_k11_38_08_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_38_08_0a_cmd_mode_dsc_dsi_panel.xml
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.lahaina.so
+vendor/lib64/hw/fingerprint.fpc.so
 
 # Graphics firmware
 vendor/firmware/a660_gmu.bin
