@@ -1599,3 +1599,5 @@ vendor/firmware/5_heavyClick_P_RTP.bin
 
 # Prebuilt HALs
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
+vendor/lib64/libmegface.so
+vendor/lib64/libMegviiFacepp-0.5.2.so
