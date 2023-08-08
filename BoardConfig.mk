@@ -238,3 +238,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/haydn/BoardConfigVendor.mk
+-include vendor/xiaomi/haydn-firmware/BoardConfigVendor.mk
